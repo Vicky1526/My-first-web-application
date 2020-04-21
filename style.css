@@ -97,6 +97,11 @@ aside {
     height: 80px;
 }
 
+.imageHolder {
+    background-color: sandybrown;
+    display: inline-block;
+}
+
 .small1 {
     border: solid 3px rgba(255, 255, 255, 1);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
@@ -111,7 +116,7 @@ aside {
     height: 60px;
 }
 
-.photoScroll .textOver {
+.imageHolder .textOver {
     visibility: hidden;
     width: 120px;
     background-color: black;
@@ -124,6 +129,6 @@ aside {
     /* z-index: 8; */
 }
 
-.photoScroll:hover .textOver {
+.imageHolder:hover .textOver {
     visibility: visible;
 }
