@@ -1,0 +1,85 @@
+/* font-family: 'Arimo', sans-serif; */
+
+
+/* font-family: 'Didact Gothic', sans-serif; */
+
+body {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    background-color: blueviolet;
+}
+
+.container {
+    background-color: thistle;
+    /* margin: auto; */
+    padding: 100px 0px 100px 0px;
+}
+
+.headPhotoHolder {
+    /* max-height: 400px; */
+    /* padding: 100px 0px 0px 0px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: darkcyan;
+    /* text-align: left; */
+    position: relative;
+}
+
+aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 5%;
+    background-color: cornflowerblue;
+}
+
+.photoHolder {
+    max-height: 500px;
+    /* width: 100%; */
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: coral;
+    /* width: 500px; */
+    text-align: left;
+    width: 90%;
+    position: relative;
+}
+
+.imgBig {
+    margin: auto;
+    max-height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.textHolder {
+    background-color: rgba(17, 17, 17, 0.8);
+    color: rgb(57, 204, 204);
+    text-align: start;
+    padding: 0px 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+}
+
+.bigText {
+    margin: 0px;
+    font-size: 2.5rem;
+}
+
+.smallText {
+    margin: 0px;
+    font-size: 1rem;
+}
+
+.small1 {
+    margin: 0px;
+    width: 200px
+}
