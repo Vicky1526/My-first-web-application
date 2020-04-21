@@ -36,6 +36,11 @@ aside {
     background-color: rgb(243, 243, 243);
 }
 
+.fas {
+    font-size: 2.5rem;
+    color: rgb(78, 78, 78);
+}
+
 .photoHolder {
     max-height: 500px;
     /* width: 100%; */
@@ -83,17 +88,42 @@ aside {
 
 .photoScroll {
     background-color: seagreen;
-    padding: 20px 60px;
+    padding: 20px 40px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 80px;
 }
 
 .small1 {
     border: solid 3px rgba(255, 255, 255, 1);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
     margin: 0px;
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     object-fit: cover;
+}
+
+.small1:hover {
+    width: 60px;
+    height: 60px;
+}
+
+.photoScroll .textOver {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    /* z-index: 8; */
+}
+
+.photoScroll:hover .textOver {
+    visibility: visible;
 }
