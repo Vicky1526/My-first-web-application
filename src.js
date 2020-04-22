@@ -1,9 +1,21 @@
-// id = "imgBig"
-// id = "photoTitle"
-// id = "photoDescription"
 let name = 'Vicky';
 console.log(`Hello, Vicky!`)
 
+var div = document.createElement('div');
+div.textContent = ``;
+div.setAttribute('class', 'imageHolder');
+document.getElementById('photoScroll').appendChild(div);
+
+var img = document.createElement('img');
+img.src = "/img/smile-wink-solid.svg";
+img.setAttribute('id', 'imgSmall');
+img.setAttribute('class', 'small1');
+div.appendChild(img);
+
+var span = document.createElement('span');
+span.textContent = "";
+span.setAttribute('id', 'textOver')
+div.appendChild(span);
 
 var data1 = {
     photo: "/img/madartavlat-tajkep-termeszet-kreativ.jpg",
@@ -36,21 +48,6 @@ var data6 = {
     description: "Sed viverra tellus in hac. Sapien nec sagittis aliquam malesuada bibendum arcu. Eu ultrices vitae auctor eu augue ut lectus arcu bibendum. Ac turpis egestas sed tempus urna et pharetra pharetra massa. Aliquam etiam erat velit scelerisque in dictum. Sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum. Ut tortor pretium viverra suspendisse potenti. Orci phasellus egestas tellus rutrum tellus. Ante metus dictum at tempor. Tellus elementum sagittis vitae et leo duis ut. Arcu dui vivamus arcu felis bibendum. Elit pellentesque habitant morbi tristique senectus et. Sit amet porttitor eget dolor morbi.",
 };
 
-var photos = [data1, data2, data3, data4, data5, data6];
-
-
-$('#imgBig').attr('src', data1.photo);
-$('#photoTitle').text(data1.title);
-$('#photoDescription').text(data1.description);
-
-/* <div class="imageHolder">
-<img src="/img/20200421-csobbanas-folyam-h2o-hullam-1295138.jpg " alt="Something " class="small1 ">
-<span class="textOver ">Test text</span>
-</div> */
-
-photos.forEach(photos => console.log(photos.photo));
-
-photos.forEach(photos => $('.photoScroll').append(`${photos.title}`));
-
-/* let names = ["Peter", "Anna", "Timothy", "<b>Vicky</b>"];
-names.forEach(names => $('ul').append(`<li>${names}</li>`)); */
+var currentPhoto = 4;
+var imagesData = [data1, data2, data3, data4, data5, data6]
+$('#imgBig').attr('src', imagesData[currentPhoto].photo);
