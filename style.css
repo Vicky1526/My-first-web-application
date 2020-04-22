@@ -60,7 +60,7 @@ aside:hover {
     position: relative;
 }
 
-.imgBig {
+#imgBig {
     margin: auto;
     max-height: 100%;
     width: 100%;
@@ -75,10 +75,10 @@ aside:hover {
     position: absolute;
     bottom: 0px;
     left: 0;
-    width: 95.5%;
+    /* width: 95.5%; */
 }
 
-.bigText {
+#photoTitle {
     font-family: 'Didact Gothic', sans-serif;
     margin: 0px;
     font-size: 1.7rem;
@@ -86,7 +86,7 @@ aside:hover {
     line-height: 1.5rem;
 }
 
-.smallText {
+#photoDescription {
     font-family: 'Arimo', sans-serif;
     margin: 0px;
     font-size: 0.9rem;
