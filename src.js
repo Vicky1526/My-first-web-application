@@ -11,4 +11,6 @@ var data = {
     description: "Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet.Amet facilisis magna etiam tempor orci eu lobortis elementum.Vulputate enim nulla aliquet porttitor.Non arcu risus quis varius quam quisque id diam.Tristique senectus et netus et malesuada     fames ac.Arcu risus quis varius quam quisque id diam.Duis at tellus at urna condimentum.Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien.Adipiscing diam donec adipiscing tristique risus nec feugiat. Fermentum posuere urna nec tincidunt praesent.Euismod elementum nisi quis eleifend quam adipiscing vitae.",
 };
 
-$('#imgBig').attr('src', data.photo)
+$('#imgBig').attr('src', data.photo);
+$('#photoTitle').text(data.title);
+$('#photoDescription').text(data.description);
