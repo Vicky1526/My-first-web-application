@@ -48,6 +48,23 @@ var data6 = {
     description: "Sed viverra tellus in hac. Sapien nec sagittis aliquam malesuada bibendum arcu. Eu ultrices vitae auctor eu augue ut lectus arcu bibendum. Ac turpis egestas sed tempus urna et pharetra pharetra massa. Aliquam etiam erat velit scelerisque in dictum. Sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum. Ut tortor pretium viverra suspendisse potenti. Orci phasellus egestas tellus rutrum tellus. Ante metus dictum at tempor. Tellus elementum sagittis vitae et leo duis ut. Arcu dui vivamus arcu felis bibendum. Elit pellentesque habitant morbi tristique senectus et. Sit amet porttitor eget dolor morbi.",
 };
 
-var currentPhoto = 4;
+
+var currentPhoto = 0;
 var imagesData = [data1, data2, data3, data4, data5, data6]
 $('#imgBig').attr('src', imagesData[currentPhoto].photo);
+
+function loadPhoto(photoNumber) {
+    $('#imgBig').attr('src', imagesData[photoNumber].photo);
+}
+
+loadPhoto(currentPhoto);
+
+$('#nextArrow').click(() => {
+    if (currentPhoto < 5) { currentPhoto++; }
+    loadPhoto(currentPhoto);
+});
+
+$('#backArrow').click(() => {
+    if (currentPhoto > 1) { currentPhoto--; }
+    loadPhoto(currentPhoto);
+})
