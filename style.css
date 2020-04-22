@@ -1,7 +1,7 @@
 body {
     /* font-family: 'Didact Gothic', sans-serif; */
     font-family: 'Arimo', sans-serif;
-    max-width: 1000px;
+    /* max-width: 1000px; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -25,6 +25,7 @@ body {
     background-color: darkcyan;
     /* text-align: left; */
     position: relative;
+    max-width: 1000px;
 }
 
 aside {
@@ -74,6 +75,7 @@ aside:hover {
     position: absolute;
     bottom: 0px;
     left: 0;
+    width: 95.5%;
 }
 
 .bigText {

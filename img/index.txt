@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +8,6 @@
     <script src="https://kit.fontawesome.com/0fe4841d5d.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Didact+Gothic&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <div class="container">
         <div class="headPhotoHolder">
@@ -17,10 +15,14 @@
                 <i class="fas fa-chevron-left"></i>
             </aside>
             <div class="photoHolder">
-                <img class="imgBig" id="imgBig">
+                <img src="/img/20200421-madartavlat-tajkep-termeszet-kreativ-3573351.jpg" class="imgBig">
                 <div class="textHolder">
-                    <h1 class="bigText"></h1>
-                    <p class="smallText"> </p>
+                    <h1 class="bigText"> Odio pellentesque diam </h1>
+                    <p class="smallText">
+                        Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. Amet facilisis magna etiam tempor orci eu lobortis elementum. Vulputate enim nulla aliquet porttitor. Non arcu risus quis varius quam quisque id diam. Tristique senectus et netus et malesuada
+                        fames ac. Arcu risus quis varius quam quisque id diam. Duis at tellus at urna condimentum. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Adipiscing diam donec adipiscing tristique risus nec feugiat.
+                        Fermentum posuere urna nec tincidunt praesent. Euismod elementum nisi quis eleifend quam adipiscing vitae.
+                    </p>
                 </div>
             </div>
             <aside id="nextArrow">
@@ -54,9 +56,7 @@
             </div>
         </div>
     </div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
     <script src="/src.js "></script>
 </body>
-
 </html>
