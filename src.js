@@ -1,22 +1,6 @@
 let name = 'Vicky';
 console.log(`Hello, Vicky!`)
 
-var div = document.createElement('div');
-div.textContent = ``;
-div.setAttribute('class', 'imageHolder');
-document.getElementById('photoScroll').appendChild(div);
-
-var img = document.createElement('img');
-img.src = "/img/smile-wink-solid.svg";
-img.setAttribute('id', 'imgSmall');
-img.setAttribute('class', 'small1');
-div.appendChild(img);
-
-var span = document.createElement('span');
-span.textContent = "";
-span.setAttribute('id', 'textOver')
-div.appendChild(span);
-
 var data1 = {
     photo: "/img/madartavlat-tajkep-termeszet-kreativ.jpg",
     title: "Odio pellentesque diam",
@@ -49,22 +33,46 @@ var data6 = {
 };
 
 
+//single box calling
+/* $('#imgBig').attr('src', data1.photo);
+$('#photoTitle').text(data1.title);
+$('#photoDescription').text(data1.description); */
+
+
+// multiple box calling
 var currentPhoto = 0;
 var imagesData = [data1, data2, data3, data4, data5, data6]
 $('#imgBig').attr('src', imagesData[currentPhoto].photo);
+$('#photoTitle').text(imagesData[currentPhoto].title);
+$('#photoDescription').text(imagesData[currentPhoto].description);
 
 function loadPhoto(photoNumber) {
     $('#imgBig').attr('src', imagesData[photoNumber].photo);
 }
 
+function loadTitle(photoNumber) {
+    $('#photoTitle').text(imagesData[photoNumber].title);
+}
+
+function loadDescription(photoNumber) {
+    $('#photoDescription').text(imagesData[photoNumber].description);
+}
+
 loadPhoto(currentPhoto);
+
 
 $('#nextArrow').click(() => {
     if (currentPhoto < 5) { currentPhoto++; }
     loadPhoto(currentPhoto);
+    loadTitle(currentPhoto);
+    loadDescription(currentPhoto);
 });
 
 $('#backArrow').click(() => {
-    if (currentPhoto > 1) { currentPhoto--; }
+    if (currentPhoto > 0) { currentPhoto--; }
     loadPhoto(currentPhoto);
+    loadTitle(currentPhoto);
+    loadDescription(currentPhoto);
 })
+
+//loadPhoto(currentPhoto);
