@@ -124,11 +124,8 @@ aside:hover {
     object-fit: cover;
 }
 
-.small1:hover {
+.imageHolder:hover .small1 {
     cursor: pointer;
-}
-
-.small1:hover {
     width: 60px;
     height: 60px;
 }

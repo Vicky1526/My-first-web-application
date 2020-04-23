@@ -75,4 +75,63 @@ $('#backArrow').click(() => {
     loadDescription(currentPhoto);
 })
 
-//loadPhoto(currentPhoto);
+loadPhoto(currentPhoto);
+
+var div = document.createElement('div');
+div.textContent = ``;
+div.setAttribute('class', 'imageHolder');
+document.getElementById('photoScroll').appendChild(div);
+
+var img = document.createElement('img');
+img.src = "/img/smile-wink-solid.svg";
+img.setAttribute('id', 'imgSmall');
+img.setAttribute('class', 'small1');
+div.appendChild(img);
+
+var span = document.createElement('span');
+span.textContent = ``;
+span.setAttribute('id', 'textOver')
+div.appendChild(span);
+
+let data = ["first", "second", "third"];
+imagesData.forEach((item, index) => {
+    $('#photoScroll').append(`<div class="box" data-index="${index}">${item} ${index}</div>`);
+    $('.box').click((event) => {
+        let indexClicked = $(event.target).attr('data-index');
+        // indexClicked is now a string! if you need it as a number you have to change it
+        // because for example "1" + 1 is going to be "11" and not 2
+        let numberIndex = parseInt(indexClicked);
+        // now numberIndex is a number
+        $('#clicked').text($ { index }[indexClicked]);
+    });
+});
+
+/*
+imagesData.forEach((item, index) => {
+    $('#photoScroll').append(`<div class="imageHolder" data-index="${index}">${index}
+    <img class="small1" id="imgSmall">
+    <span class="textOver ">${item}</span>
+    </div>`);
+    $('.imageHolder').click((event) => {
+        let indexClicked = $(event.target).attr('data-index');
+        // indexClicked is now a string! if you need it as a number you have to change it
+        // because for example "1" + 1 is going to be "11" and not 2
+        let numberIndex = parseInt(indexClicked);
+        // now numberIndex is a number
+        $('#clicked').text(imagesData[indexClicked]);
+    });
+});
+
+/*
+imagesData.forEach((item, index) => {
+    $('#photoScroll').append(`<div class="imageHolder" data-index="${index}">${item}${index}</div>`);
+    $('.imageHolder').click((event) => {
+        let indexClicked = $(event.target).attr('data-index');
+        // indexClicked is now a string! if you need it as a number you have to change it
+        // because for example "1" + 1 is going to be "11" and not 2
+        let numberIndex = parseInt(indexClicked);
+        // now numberIndex is a number
+        $('#clicked').text(imagesData[indexClicked]);
+    });
+});
+*/
