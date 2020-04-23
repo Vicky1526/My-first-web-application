@@ -83,7 +83,10 @@ loadPhoto(currentPhoto);
 
 
 //bottom part
-/*
+
+
+
+
 //thumbnail part
 $(document).ready(function() {
     $('.photoScroll img').click(function(e) {
@@ -91,7 +94,7 @@ $(document).ready(function() {
         $('.photoHolder img').attr("src", $(this).attr("src"));
     })
 })
-*/
+
 
 
 /*
@@ -107,18 +110,17 @@ img.setAttribute('class', 'small1');
 div.appendChild(img);
 
 var span = document.createElement('span');
-span.textContent = ``;
-span.setAttribute('id', 'textOver')
+span.textContent = `${.title}`;
+span.setAttribute('class', 'textOver')
 div.appendChild(span);
 */
+/*
+document.getElementsByClassName(textOver).text('Frog')
 
-//document.getElementsByClassName(textOver).text('Frog')
-
-//function loadMiniTitle(photoNumber) {
-
-//$('.imageHolder span').appent(imagesData[photoNumber].title);
+function loadMiniTitle(photoNumber) {
+    $('.imageHolder span').appent(imagesData[photoNumber].title);
 }
-
+*/
 
 
 
