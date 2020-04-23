@@ -51,3 +51,28 @@ div.appendChild(span);
 
 
 
+/*
+var div = document.createElement('div');
+div.textContent = ``;
+div.setAttribute('class', 'imageHolder');
+document.getElementById('photoScroll').appendChild(div);
+
+var img = document.createElement('img');
+img.src = "/img/smile-wink-solid.svg";
+img.setAttribute('id', 'imgSmall');
+img.setAttribute('class', 'small1');
+div.appendChild(img);
+
+var span = document.createElement('span');
+span.textContent = `${.title}`;
+span.setAttribute('class', 'textOver')
+div.appendChild(span);
+*/
+
+/*
+document.getElementsByClassName(textOver).text('Frog')
+
+function loadMiniTitle(photoNumber) {
+    $('.imageHolder span').appent(imagesData[photoNumber].title);
+}
+*/

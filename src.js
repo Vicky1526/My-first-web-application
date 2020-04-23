@@ -78,24 +78,36 @@ $('#backArrow').click(() => {
 
 loadPhoto(currentPhoto);
 
+
+
+
+
+
+
+
+
+
 //bottom part
 imagesData.forEach((item, index) => {
-    $('#photoScroll').append(`<div class="imageHolder" data-index="${index}">
-    <img class="small1" id="imgSmall" src =${item.photo} data-index="${index}">
+    $('#photoScroll').append(`<div class="imageHolder" dataindex="${index}">
+    <img class="small1" id="imgSmall" src =${item.photo} dataindex="${index}">
     <span class="textOver ">${item.title}</span>
     <p class="smallDescription">${item.description}</p>
     </div>`);
     $('.imageHolder').click((e) => {
-        var indexClicked = $(e.target).attr('data-index');
+        var indexClicked = $(e.target).attr('dataindex');
         // indexClicked is now a string! if you need it as a number you have to change it
         // because for example "1" + 1 is going to be "11" and not 2
-        var numberIndex = parseInt(indexClicked);
+        //var numberIndex = parseInt(indexClicked);
         // now numberIndex is a number
-        $('#clicked').text(imagesData[indexClicked]);
+        $('#clicked').text(imagesData[indexClicked].photo);
     });
 });
 
-imagesData.forEach(e => console.log(e));
+
+
+
+// imagesData.forEach(e => console.log(e));
 
 function popUp(e) {
     if (e.target.classList.contains("small1")) {
@@ -105,6 +117,8 @@ function popUp(e) {
 };
 document.getElementById("photoScroll").addEventListener('click', popUp)
 
+
+/*
 //thumbnail part
 $(document).ready(function() {
     $('.photoScroll img').click(function(e) {
@@ -112,29 +126,4 @@ $(document).ready(function() {
         $('.photoHolder img').attr("src", $(this).attr("src"));
     })
 });
-
-/*
-var div = document.createElement('div');
-div.textContent = ``;
-div.setAttribute('class', 'imageHolder');
-document.getElementById('photoScroll').appendChild(div);
-
-var img = document.createElement('img');
-img.src = "/img/smile-wink-solid.svg";
-img.setAttribute('id', 'imgSmall');
-img.setAttribute('class', 'small1');
-div.appendChild(img);
-
-var span = document.createElement('span');
-span.textContent = `${.title}`;
-span.setAttribute('class', 'textOver')
-div.appendChild(span);
-*/
-
-/*
-document.getElementsByClassName(textOver).text('Frog')
-
-function loadMiniTitle(photoNumber) {
-    $('.imageHolder span').appent(imagesData[photoNumber].title);
-}
 */
