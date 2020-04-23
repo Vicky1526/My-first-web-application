@@ -1,4 +1,5 @@
 body {
+    /* overflow: hidden; */
     /* font-family: 'Didact Gothic', sans-serif; */
     font-family: 'Arimo', sans-serif;
     /* max-width: 1000px; */
@@ -7,6 +8,7 @@ body {
     justify-content: center;
     margin: auto;
     background-color: #a9a9a9;
+    height: 600px;
 }
 
 .container {
@@ -131,13 +133,14 @@ aside:hover {
 }
 
 .textOver {
+    font-size: 0.9rem;
     visibility: hidden;
     width: 120px;
     background-color: black;
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 5px 8px;
     position: absolute;
     bottom: 85px;
 }
@@ -158,4 +161,12 @@ aside:hover {
     border-bottom: 0;
     margin-left: -0.5rem;
     margin-bottom: -0.3rem;
+}
+
+.smallDescription {
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
 }
