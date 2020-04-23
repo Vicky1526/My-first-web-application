@@ -98,7 +98,7 @@ imagesData.forEach((item, index) => {
         var indexClicked = $(e.target).attr('dataindex');
         // indexClicked is now a string! if you need it as a number you have to change it
         // because for example "1" + 1 is going to be "11" and not 2
-        //var numberIndex = parseInt(indexClicked);
+        var numberIndex = parseInt(indexClicked);
         // now numberIndex is a number
         $('#clicked').text(imagesData[indexClicked].photo);
     });
@@ -112,13 +112,12 @@ imagesData.forEach((item, index) => {
 function popUp(e) {
     if (e.target.classList.contains("small1")) {
         console.log(e.target);
-
     }
 };
 document.getElementById("photoScroll").addEventListener('click', popUp)
 
 
-/*
+
 //thumbnail part
 $(document).ready(function() {
     $('.photoScroll img').click(function(e) {
@@ -126,4 +125,3 @@ $(document).ready(function() {
         $('.photoHolder img').attr("src", $(this).attr("src"));
     })
 });
-*/
