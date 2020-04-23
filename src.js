@@ -1,6 +1,8 @@
 let name = 'Vicky';
 console.log(`Hello, Vicky!`)
 
+//top part
+
 var data1 = {
     photo: "/img/madartavlat-tajkep-termeszet-kreativ.jpg",
     title: "Odio pellentesque diam",
@@ -60,7 +62,6 @@ function loadDescription(photoNumber) {
 
 loadPhoto(currentPhoto);
 
-
 $('#nextArrow').click(() => {
     if (currentPhoto < 5) { currentPhoto++; }
     loadPhoto(currentPhoto);
@@ -77,6 +78,23 @@ $('#backArrow').click(() => {
 
 loadPhoto(currentPhoto);
 
+
+
+
+
+//bottom part
+/*
+//thumbnail part
+$(document).ready(function() {
+    $('.photoScroll img').click(function(e) {
+        e.preventDefault();
+        $('.photoHolder img').attr("src", $(this).attr("src"));
+    })
+})
+*/
+
+
+/*
 var div = document.createElement('div');
 div.textContent = ``;
 div.setAttribute('class', 'imageHolder');
@@ -92,7 +110,19 @@ var span = document.createElement('span');
 span.textContent = ``;
 span.setAttribute('id', 'textOver')
 div.appendChild(span);
+*/
 
+//document.getElementsByClassName(textOver).text('Frog')
+
+//function loadMiniTitle(photoNumber) {
+
+//$('.imageHolder span').appent(imagesData[photoNumber].title);
+}
+
+
+
+
+/*
 let data = ["first", "second", "third"];
 imagesData.forEach((item, index) => {
     $('#photoScroll').append(`<div class="box" data-index="${index}">${item} ${index}</div>`);

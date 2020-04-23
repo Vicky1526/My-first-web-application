@@ -53,6 +53,7 @@
             <div class="imageHolder ">
                 <img src="/img/tajkep-hegyek-termeszet-eg.jpg " alt=" 006 " class="small1 ">
                 <span class="textOver ">Test text</span>
+            </div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
