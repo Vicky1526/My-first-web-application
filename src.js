@@ -79,28 +79,22 @@ $('#backArrow').click(() => {
 loadPhoto(currentPhoto);
 
 
-
-
-
-
-
-
-
-
 //bottom part
 imagesData.forEach((item, index) => {
-    $('#photoScroll').append(`<div class="imageHolder" dataindex="${index}">
-    <img class="small1" id="imgSmall" src =${item.photo} dataindex="${index}">
+    $('#photoScroll').append(`<div class="imageHolder" data-index="${index}">
+    <img class="small1" id="imgSmall" src =${item.photo} data-index="${index}">
     <span class="textOver ">${item.title}</span>
     <p class="smallDescription">${item.description}</p>
     </div>`);
     $('.imageHolder').click((e) => {
-        var indexClicked = $(e.target).attr('dataindex');
+        var indexClicked = $(e.target).attr('data-index');
         // indexClicked is now a string! if you need it as a number you have to change it
         // because for example "1" + 1 is going to be "11" and not 2
         var numberIndex = parseInt(indexClicked);
         // now numberIndex is a number
-        $('#clicked').text(imagesData[indexClicked].photo);
+        $('.photoHolder img').attr('src', imagesData[indexClicked].photo);
+        $('#photoTitle').text(imagesData[indexClicked].title);
+        $('#photoDescription').text(imagesData[indexClicked].description);
     });
 });
 
@@ -111,9 +105,11 @@ function popUp(e) {
 };
 document.getElementById("photoScroll").addEventListener('click', popUp)
 
+
+/*
 //thumbnail part
 $(document).ready(function() {
     $('.photoScroll img').click(function(e) {
         $('.photoHolder img').attr("src", $(this).attr("src"));
     })
-});
+}); */
