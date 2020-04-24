@@ -50,6 +50,7 @@ $('#photoDescription').text(imagesData[currentPhoto].description);
 
 function loadPhoto(photoNumber) {
     $('#imgBig').attr('src', imagesData[photoNumber].photo);
+
 }
 
 function loadTitle(photoNumber) {
@@ -95,6 +96,7 @@ imagesData.forEach((item, index) => {
         $('.photoHolder img').attr('src', imagesData[indexClicked].photo);
         $('#photoTitle').text(imagesData[indexClicked].title);
         $('#photoDescription').text(imagesData[indexClicked].description);
+
     });
 });
 
