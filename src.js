@@ -96,8 +96,9 @@ imagesData.forEach((item, index) => {
         $('.photoHolder img').attr('src', imagesData[indexClicked].photo);
         $('#photoTitle').text(imagesData[indexClicked].title);
         $('#photoDescription').text(imagesData[indexClicked].description);
-
+        $('#clicked').text(indexClicked);
     });
+
 });
 
 function popUp(e) {
