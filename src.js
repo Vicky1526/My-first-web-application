@@ -104,11 +104,6 @@ imagesData.forEach((item, index) => {
     });
 });
 
-
-
-
-// imagesData.forEach(e => console.log(e));
-
 function popUp(e) {
     if (e.target.classList.contains("small1")) {
         console.log(e.target);
@@ -116,12 +111,9 @@ function popUp(e) {
 };
 document.getElementById("photoScroll").addEventListener('click', popUp)
 
-
-
 //thumbnail part
 $(document).ready(function() {
     $('.photoScroll img').click(function(e) {
-
         $('.photoHolder img').attr("src", $(this).attr("src"));
     })
 });
