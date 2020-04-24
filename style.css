@@ -77,7 +77,7 @@ aside:hover {
     padding: 15px 20px;
     position: absolute;
     bottom: 0px;
-    left: 0;
+    left: 0px;
     /* width: 95.5%; */
 }
 
@@ -152,7 +152,6 @@ aside:hover {
 }
 
 .textOver:after {
-    content: '';
     position: absolute;
     bottom: 0;
     left: 50%;

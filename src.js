@@ -51,6 +51,7 @@ $('#photoDescription').text(imagesData[currentPhoto].description);
 function loadPhoto(photoNumber) {
     $('#imgBig').attr('src', imagesData[photoNumber].photo);
 
+
 }
 
 function loadTitle(photoNumber) {
