@@ -97,9 +97,10 @@ imagesData.forEach((item, index) => {
         $('#photoTitle').text(imagesData[indexClicked].title);
         $('#photoDescription').text(imagesData[indexClicked].description);
         $('#clicked').text(indexClicked);
+        currentPhoto === indexClicked;
     });
-
 });
+
 
 function popUp(e) {
     if (e.target.classList.contains("small1")) {
@@ -115,4 +116,5 @@ $(document).ready(function() {
     $('.photoScroll img').click(function(e) {
         $('.photoHolder img').attr("src", $(this).attr("src"));
     })
-}); */
+}); 
+*/
