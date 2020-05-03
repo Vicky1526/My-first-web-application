@@ -84,7 +84,7 @@ loadPhoto(currentPhoto);
 //bottom part
 imagesData.forEach((item, index) => {
     $('#photoScroll').append(`<div class="imageHolder" data-index="${index}">
-    <img class="small1" id="imgSmall" src =${item.photo} data-index="${index}">
+    <img class="small1" src =${item.photo} data-index="${index}">
     <span class="textOver ">${item.title}</span>
     <p class="smallDescription">${item.description}</p>
     </div>`);
@@ -95,11 +95,49 @@ imagesData.forEach((item, index) => {
         var numberIndex = parseInt(indexClicked);
         // now numberIndex is a number
         $('.photoHolder img').attr('src', imagesData[indexClicked].photo);
-        $('#photoTitle').text(imagesData[indexClicked].title);
-        $('#photoDescription').text(imagesData[indexClicked].description);
+        $('.photoHolder h1').text(imagesData[indexClicked].title);
+        $('.photoHolder p').text(imagesData[indexClicked].description);
         currentPhoto = indexClicked;
+        console.log(indexClicked)
+        if (currentPhoto) {
+            $(".small1").addClass("hover");
+        } else {
+            $(".small1").removeClass("hover");
+        }
     });
+
+
 });
+
+/*
+$(".small1").toggleClass("hover", addOrRemove);
+//^ this is the same as ˇ that
+if (addOrRemove) {
+    $(".small1").addClass("hover");
+} else {
+    $(".small1").removeClass("hover");
+}
+*/
+/*
+$(".small1").hover(
+    function(indexClicked) {
+        $(this).addClass("hover");
+    },
+    function(indexClicked) {
+        $(this).removeClass("hover");
+    }
+);
+*/
+/*
+    $(".small1").hover(function() {
+        $(this).css("width", "65px");
+        $(this).css("height", "65px");
+    }, function() {
+        $(this).css("width", "50px");
+        $(this).css("height", "50px");
+    });
+*/
+
 
 
 function popUp(e) {
