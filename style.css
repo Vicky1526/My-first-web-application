@@ -151,7 +151,8 @@ aside:hover {
     visibility: visible;
 }
 
-.textOver:after {
+.textOver::before {
+    content: "";
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -163,6 +164,21 @@ aside:hover {
     margin-left: -0.5rem;
     margin-bottom: -0.3rem;
 }
+
+
+/* .textOver:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 0.5rem solid transparent;
+    border-top-color: #000000;
+    border-bottom: 0;
+    margin-left: -0.5rem;
+    margin-bottom: -0.3rem;
+} */
 
 .smallDescription {
     visibility: hidden;
